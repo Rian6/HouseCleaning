@@ -1,12 +1,13 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {DefaultTab} from './src/view_navigation/tab'
+import TabPadrao from './src/view_navigation/tab'
+
+
 export default function App() {
-  const Tab = createBottomTabNavigator();
-    return (
-      <DefaultTab/>
-    );
+  return(
+    <TabPadrao/>
+  )
   }
 
   const styles = StyleSheet.create({

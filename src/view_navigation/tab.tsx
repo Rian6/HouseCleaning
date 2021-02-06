@@ -1,24 +1,22 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import Cadastro from './../view_screens/login/cadastro';
-import Login from './../view_screens/login/login';
+import Login from '../view_screens/login/login';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Cadastro from '../view_screens/login/cadastro';
 
 //create by: rian
 //04/02/2021
-
-export function DefaultTab() {
-  const Tab = createBottomTabNavigator();
-    return (
+const Tab = createBottomTabNavigator();
+const TabPadrao = () => (
       <NavigationContainer>
       <Tab.Navigator       
         tabBarOptions={{
-          inactiveBackgroundColor:'#6c1e82',
-          activeBackgroundColor:'#b771df',
-        activeTintColor: 'black',
-        inactiveTintColor: '#fdfefd',
+          inactiveBackgroundColor:'#493bee',
+          activeBackgroundColor:'#8980f4',
+        activeTintColor: 'white',
+        inactiveTintColor: 'white',
         iconStyle:{width:50}
       }}>
       <Tab.Screen         
@@ -31,7 +29,7 @@ export function DefaultTab() {
           ),
         }} />
       <Tab.Screen       
-      name="Cadastrar"
+      name="Cadastro"
         component={Cadastro}
         options={{
           tabBarLabel: 'Cadastrar',
@@ -42,10 +40,12 @@ export function DefaultTab() {
     </Tab.Navigator>
     </NavigationContainer>
     );
-  }
 
   const styles = StyleSheet.create({
     tab: {
       flex: 1,
     },
   });
+
+  
+  export default TabPadrao;
