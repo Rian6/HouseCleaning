@@ -1,20 +1,18 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import Login from '../view_screens/login/login';
-import { NavigationContainer } from '@react-navigation/native';
+import Login from '../view_screens/tab_login/login';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Cadastro from '../view_screens/login/cadastro';
+import Cadastro from '../view_screens/tab_login/cadastro';
 
 //create by: rian
 //04/02/2021
 const Tab = createBottomTabNavigator();
 const TabPadrao = () => (
-      <NavigationContainer>
       <Tab.Navigator       
         tabBarOptions={{
-          inactiveBackgroundColor:'#493bee',
-          activeBackgroundColor:'#8980f4',
+          inactiveBackgroundColor:'#0c7593',
+          activeBackgroundColor:'#11acd7',
         activeTintColor: 'white',
         inactiveTintColor: 'white',
         iconStyle:{width:50}
@@ -38,7 +36,6 @@ const TabPadrao = () => (
           ),
         }}/>
     </Tab.Navigator>
-    </NavigationContainer>
     );
 
   const styles = StyleSheet.create({
